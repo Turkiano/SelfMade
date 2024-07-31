@@ -1,4 +1,5 @@
 using Coffee_Shop_App.src.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Coffee_Shop_App.src.Abstractions
 {
@@ -8,9 +9,17 @@ namespace Coffee_Shop_App.src.Abstractions
 
 
         public List<User> FindAll();
-        public List<User> CreateOne(User user);
-        // public UserReadDto SignUp(UserCreateDto user);
-        // public string SignIn(UserSignInDto user);
-        // public UserReadDto? FindOneByEmail(string email);
+
+        public User CreateOne(User user);
+
+        public User? findOne(string userId);
+
+        public User? findOneByEmail(string userEmail);
+
+        public User UpdateOne(string Email, User user);
+
+
+
+
     }
 }

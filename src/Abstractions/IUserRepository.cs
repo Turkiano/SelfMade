@@ -1,4 +1,3 @@
-using Coffee_Shop_App.src;
 using Coffee_Shop_App.src.Entities;
 
 
@@ -8,7 +7,17 @@ namespace Coffee_Shop_Appe.src.Abstractions
     {
 
         public List<User> FindAll();
-        public List<User> CreateOne(User user);
+
+        public User CreateOne(User user);
+
+        public User? findOne(string userId);
+
+        public User? findOneByEmail(string userEmail);
+
+        public User UpdateOne(User updatedUser);
+
+
+
 
 
 
